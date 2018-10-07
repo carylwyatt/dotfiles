@@ -29,7 +29,8 @@ This took me forever to figure out, but it was as simple as cloning the powerlin
 1. restart terminal
 1. open terminal preferences: Edit > Preferences
 1. on the appearance tab, use dropdown to select font
+1. while you have preferences open, on the advanced tab, change the default character encoding to utf-8 (unicode)
 
 ## oh-my-zsh
 
-Need to edit this to include zsh settings
+For whatever reason, the powerline symbols don't work for vim-airline in zsh. I can't figure it out, but I plan on using vim for most things anyway, so I'm not going to worry about using zsh for now. Maybe I can tackle this another day.
