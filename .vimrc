@@ -17,6 +17,7 @@ Plugin 'dahu/vim-fanfingtastic'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-airline/vim-airline'
+Plugin 'terryma/vim-smooth-scroll'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 
@@ -32,24 +33,28 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
+          let g:airline_symbols = {}
 endif
 
 " unicode symbols
 "let g:airline_left_sep = '»'
-"let g:airline_left_sep = '▶'
 "let g:airline_right_sep = '«'
-"let g:airline_right_sep = '◀'
-"let g:airline_symbols.linenr = '␊'
-"let g:airline_symbols.linenr = '␤'
 "let g:airline_symbols.linenr = '¶'
-"let g:airline_symbols.branch = '⎇'
-"let g:airline_symbols.paste = 'ρ'
-"let g:airline_symbols.paste = 'Þ'
-"let g:airline_symbols.paste = '∥'
-"let g:airline_symbols.whitespace = 'Ξ'
+
+" caryl's key mappings
+
+" nerdtree
+map <silent> <C-n> :NERDTreeToggle<CR>
+
+" smooth scroll
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 syntax enable
+set guifont=Source\ Code\ Pro\ for\ Powerline "make sure to escape the spaces in the name properly
+set encoding=utf-8
 set t_Co=256
 set background=dark
 color Tomorrow-Night-Bright
