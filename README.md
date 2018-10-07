@@ -34,3 +34,9 @@ This took me forever to figure out, but it was as simple as cloning the powerlin
 ## oh-my-zsh
 
 For whatever reason, the powerline symbols don't work for vim-airline in zsh. I can't figure it out, but I plan on using vim for most things anyway, so I'm not going to worry about using zsh for now. Maybe I can tackle this another day.
+
+## 256 colors
+
+I've been struggling to get the xfce4-terminal to use 256 colors. This did the trick: [set $TERM to xterm-256color](https://bbs.archlinux.org/viewtopic.php?id=175581)
+
+I had to create the application folder in the .local directory, but other than that, this worked! Now to figure out how to create a keyboard shortcut to launch *this* terminal instead of the default version.
