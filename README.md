@@ -14,7 +14,7 @@ Mostly followed these instructions:
 
 ### symbols
 1. `wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf`
-1. `https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf`
+1. `wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf`
 1. `sudo mv PowerlineSymbols.otf /usr/share/fonts/`
 1. `sudo fc-cache -vf`
 1. `sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/`
@@ -33,7 +33,13 @@ This took me forever to figure out, but it was as simple as cloning the powerlin
 
 ## oh-my-zsh
 
-For whatever reason, the powerline symbols don't work for vim-airline in zsh. I can't figure it out, but I plan on using vim for most things anyway, so I'm not going to worry about using zsh for now. Maybe I can tackle this another day.
+Getting powerline fonts and symbols set up for oh-my-zsh was a whole thing, and I finally figured out why: I had all my font config stuff "installed" in my /home/caryl (user) files but for zsh, they needed to be installed/configured in the ~ (root) files. 
+
+Oy. All of the above is still valid, it just needs to go in two places??
+
+Can't really believe it's working, but it is! Here's the installation I followed:
+- [zsh and oh-my-zsh for linux](https://www.howtoforge.com/tutorial/how-to-setup-zsh-and-oh-my-zsh-on-linux/)
+- [set oh-my-zsh as default shell](https://medium.com/denix-daily/how-to-set-oh-my-zsh-as-a-default-shell-in-ubuntu14-04-bd2524fd7144)
 
 ## 256 colors
 
