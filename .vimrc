@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
 Plugin 'dahu/vim-fanfingtastic'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'pangloss/vim-javascript'
@@ -20,6 +21,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'terryma/vim-smooth-scroll'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'digitaltoad/vim-pug'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
