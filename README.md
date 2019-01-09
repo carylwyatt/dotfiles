@@ -44,9 +44,9 @@ Can't really believe it's working, but it is! Here's the installation I followed
 ## 256 colors
 
 <del>
-I've been struggling to get the xfce4-terminal to use 256 colors. This did the trick: [set $TERM to xterm-256color](https://bbs.archlinux.org/viewtopic.php?id=175581)
+I've been struggling to get the xfce4-terminal to use 256 colors. This did the trick: [set $TERM to xterm-256color](https://bbs.archlinux.org/viewtopic.php?id=175581)</del>
 
-I had to create the application folder in the .local directory, but other than that, this worked! Now to figure out how to create a keyboard shortcut to launch *this* terminal instead of the default version.
+<del>I had to create the application folder in the .local directory, but other than that, this worked! Now to figure out how to create a keyboard shortcut to launch *this* terminal instead of the default version.
 </del>
 
 **Update (Jan 2019):** Found a new way, and this legit works: [add if statement to end of `~/.bashrc`](https://stackoverflow.com/questions/19327836/why-am-i-seeing-only-8-colors-in-terminal-xfce-terminal)
