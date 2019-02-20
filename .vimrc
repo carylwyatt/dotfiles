@@ -18,11 +18,15 @@ Plugin 'dahu/vim-fanfingtastic'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'terryma/vim-smooth-scroll'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'digitaltoad/vim-pug'
-
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'grvcoelho/vim-javascript-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -34,6 +38,7 @@ filetype plugin indent on    " required
 let g:airline#extensions#tabline#enabled = 1 
 let g:airline#extensions#branch#enabled = 1 
 let g:airline_powerline_fonts = 1
+let g:airline_theme='dracula'
 
 if !exists('g:airline_symbols')
           let g:airline_symbols = {}
@@ -59,8 +64,9 @@ syntax enable
 set guifont=Source\ Code\ Pro\ for\ Powerline "make sure to escape the spaces in the name properly
 set encoding=utf-8
 set t_Co=256
+set termguicolors
 set background=dark
-color Tomorrow-Night-Bright
+color dracula
 set number relativenumber 
 set tabstop=2
 set shiftwidth=2
