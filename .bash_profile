@@ -27,4 +27,5 @@ alias cdroots='cd /Applications/wordpress-5.0.3-2/apps/wordpress/htdocs/wp-conte
 # had to do some sed replacement magic to fix an apostrophe encoding issue
 SED="s|\\\'e2\\\'80\\\'99|\\\'92|g"; export SED
 
+# to use: `$ cat file.md | md` -> copies md file to clipboard for pasting elsewhere
 alias md='pandoc --from markdown --to html | textutil -convert rtf -stdin -stdout -format html | sed $SED | pbcopy -Prefer rtf'
