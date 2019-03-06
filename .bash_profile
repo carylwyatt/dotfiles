@@ -29,3 +29,7 @@ SED="s|\\\'e2\\\'80\\\'99|\\\'92|g"; export SED
 
 # to use: `$ cat file.md | md` -> copies md file to clipboard for pasting elsewhere
 alias md='pandoc --from markdown --to html | textutil -convert rtf -stdin -stdout -format html | sed $SED | pbcopy -Prefer rtf'
+
+# copy html from file to clipboard (this is tricky in vim)
+# to use: `$ cat file.html | html`
+alias html='pbcopy -Prefer html'
