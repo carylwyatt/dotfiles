@@ -33,3 +33,7 @@ alias md='pandoc --from markdown --to html | textutil -convert rtf -stdin -stdou
 # copy html from file to clipboard (this is tricky in vim)
 # to use: `$ cat file.html | html`
 alias html='pbcopy -Prefer html'
+
+# open file in chrome 
+# to use: `$ chrome index.html`
+alias chrome='open -a "Google Chome"' 
