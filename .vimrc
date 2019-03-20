@@ -27,12 +27,18 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'grvcoelho/vim-javascript-snippets'
+Plugin 'jiangmiao/auto-pairs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " Put your non-Plugin stuff after this line
+
+" easy buffer switching
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bp\|bd #<CR>
 
 " airline settings
 let g:airline#extensions#tabline#enabled = 1 
@@ -53,12 +59,22 @@ endif
 
 " nerdtree
 map <silent> <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeNodeDelimiter = "\u00a0"
+
+" search for visually selected text using //
+" copies visually selected text, then starts a search command and pastes the
+" copied text into search
+vnoremap // y/<C-R>"<CR>
 
 " smooth scroll
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+
+" spell check in markdown files
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd FileType gitcommit setlocal spell
 
 syntax enable
 set guifont=Source\ Code\ Pro\ for\ Powerline "make sure to escape the spaces in the name properly
