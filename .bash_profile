@@ -36,4 +36,4 @@ alias html='pbcopy -Prefer html'
 
 # open file in chrome 
 # to use: `$ chrome index.html`
-alias chrome='open -a "Google Chome"' 
+alias chrome='open -a "Google Chrome"' 
