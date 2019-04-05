@@ -1,6 +1,9 @@
 # dotfiles
 
 ## set up fresh vim:
+1. check the version of vim: `vim --version`
+  * if <8, upgrade!
+  * `brew install vim` did the trick on macOS
 1. clone repo into working directory `git clone https://github.com/carylwyatt/dotfiles.git`
 1. copy .vimrc to user directory `cp .vimrc ~/.vimrc`
 1. install Vundle `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
@@ -11,11 +14,20 @@
 1. `cp .git-prompt.sh ~/.git-prompt.sh`
 1. `brew install git bash-completion`
 
+## iterm settings
+
+- follow instrcutions at [dracula for iterm](https://draculatheme.com/iterm/) for setting iterm theme
+- key remaps:
+  - change right command key to control
+  - change "to switch panes" to opt-number
+- once you've installed powerline fonts and symbols, head to preferenes > profiles > text and change font under Font to `source code pro` and Non-ASCII Font to `PowerlineSymbols`
+
 ## powerline fonts and symbols
 
 Mostly followed these instructions: 
 - [How can I install and use powerline plugin](https://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin)
 - [Powerline fonts repo](https://github.com/powerline/fonts)
+- *on macos, you still clone the repos below, but just click the + icon in fontbook and select that folder to add them to your system*
 
 ### symbols
 1. `wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf`
