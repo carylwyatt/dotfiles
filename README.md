@@ -8,6 +8,8 @@
 
 ## if you want all the magic of my bash setup
 1. `cp .bash_profile ~/.bash_profile`
+1. `cp .git-prompt.sh ~/.git-prompt.sh`
+1. `brew install git bash-completion`
 
 ## powerline fonts and symbols
 
