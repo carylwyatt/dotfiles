@@ -60,7 +60,11 @@ endif
 " nerdtree
 map <silent> <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeNodeDelimiter = "\u00a0"
-" close vim if only NERDTree window exit
+
+"auto-open NERDTree in vim
+au VimEnter * NERDTree
+
+"close vim if only NERDTree window exit
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " search for visually selected text using //
