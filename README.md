@@ -84,3 +84,8 @@ if [ "$COLORTERM" == "xfce4-terminal" ] ; then
   export TERM=xterm-256color
 fi
 ``` 
+
+## docker
+
+if docker is giving you the docker deamon connection error, try:
+* `sudo service docker start # Ubuntu/Debian`
