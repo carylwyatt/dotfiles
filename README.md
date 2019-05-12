@@ -4,6 +4,11 @@
 1. check the version of vim: `vim --version`
    * if <8, upgrade!
    * `brew install vim` did the trick on macOS
+   * ubuntu:
+     * had to add `add-apt-repository` ability: `sudo apt-get install -y software-properties-common`
+     * `sudo add-apt-repository ppa:jonathonf/vim`
+     * `sudo apt-get update`
+     * `sudo apt-get install vim`
 1. clone repo into working directory `git clone https://github.com/carylwyatt/dotfiles.git`
 1. copy .vimrc to user directory `cp .vimrc ~/.vimrc`
 1. install Vundle `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
