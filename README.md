@@ -19,6 +19,9 @@
 1. `cp .git-prompt.sh ~/.git-prompt.sh`
 1. `brew install git bash-completion`
 
+if ubuntu, you'll need to add this line to the bottom of `~/.bashrc`:
+* `. ~/.bash_profile`
+
 ## iterm settings
 
 - follow instrcutions at [dracula for iterm](https://draculatheme.com/iterm/) for setting iterm theme
