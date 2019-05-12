@@ -21,6 +21,7 @@
 
 if ubuntu, you'll need to add this line to the bottom of `~/.bashrc`:
 * `. ~/.bash_profile`
+* if you're still getting a bash error about `PS1`, try: `sudo apt-get install git-core bash-completion` to double check git-completion installed properly
 
 ## iterm settings
 
@@ -31,6 +32,8 @@ if ubuntu, you'll need to add this line to the bottom of `~/.bashrc`:
 - once you've installed powerline fonts and symbols, head to preferenes > profiles > text and change font under Font to `source code pro` and Non-ASCII Font to `PowerlineSymbols`
 
 ## powerline fonts and symbols
+
+***For whatever reason, great fonts and symbols are automagically included in ubuntu 18.04, so no need to install any of these powerline fonts unless you really want them! However, you'll probably want emoji support for your unicorn, so `sudo apt-get install fonts-emojione`***
 
 Mostly followed these instructions: 
 - [How can I install and use powerline plugin](https://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin)
