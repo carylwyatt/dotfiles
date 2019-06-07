@@ -50,6 +50,19 @@ This took me forever to figure out, but it was as simple as cloning the powerlin
 
 ## oh-my-zsh
 
+### macOS
+
+Since macOS Catalina will be changing the default shell from bash to zsh, I've started working on tricking out my zsh setup. Of course I'm using oh my zsh, so head to [their homepage](https://ohmyz.sh) for install instructions. Then:
+
+1. `cp .zshrc ~/.zshrc`
+1. `cp .agnoster.zsh-theme ~/.oh-my-zsh/themes/agnoster.zsh-theme`
+
+I spent a few hours trying to figure out why my agnoster symbols didn't match their README images... turns out the agnoster file shipped with the oh my zsh install is out of date. Mine is the latest (as of June 2019).
+
+One other change I made in iTerm is under Preferences > Profiles > Colors: change Black to 20% Gray (you can choose this options when you click on the black square under "Normal") so it's not so starkly black behind the unicorn emoji.
+
+### linux
+
 Getting powerline fonts and symbols set up for oh-my-zsh was a whole thing, and I finally figured out why: I had all my font config stuff "installed" in my /home/caryl (user) files but for zsh, they needed to be installed/configured in the ~ (root) files. 
 
 Oy. All of the above is still valid, it just needs to go in two places??
