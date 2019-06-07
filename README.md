@@ -99,6 +99,20 @@ if [ "$COLORTERM" == "xfce4-terminal" ] ; then
   export TERM=xterm-256color
 fi
 ``` 
+## f#@%-ing `^M` issues
+
+DOS and UNIX files don't get along. I've had many issues in the past with the stupid LF vs CRLF line endings/carriage returns. Here's the official Github statement on it: [Dealing with line endings](https://help.github.com/en/articles/dealing-with-line-endings).
+
+I have two settings globally:
+
+```
+git config --global core.autocrlf input
+git config --global core.safecrlf false
+```
+
+You can check these settings in any git-enabled directory with `git config --list`. 
+
+Most recently, these stupid `^M` errors threw off my entire vim setup after I decided it was a good idea to update all my plugins. I'm basically obsessed with my vim settings, so this was not only a pain in the ass but kind of terrifying. What ended up fixing it was deleting the plugins that were causing the issue (they live in `~/.vim/bundle`, use `rm -Rf [name of plugin directory]`) then re-installing the plugin via Vundle (`vim +PluginInstall +qall`).
 
 ## docker
 
