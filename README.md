@@ -2,8 +2,13 @@
 
 ## set up fresh vim:
 1. check the version of vim: `vim --version`
-  * if <8, upgrade!
-  * `brew install vim` did the trick on macOS
+   * if <8, upgrade!
+   * `brew install vim` did the trick on macOS
+   * ubuntu:
+     * had to add `add-apt-repository` ability: `sudo apt-get install -y software-properties-common`
+     * `sudo add-apt-repository ppa:jonathonf/vim`
+     * `sudo apt-get update`
+     * `sudo apt-get install vim`
 1. clone repo into working directory `git clone https://github.com/carylwyatt/dotfiles.git`
 1. copy .vimrc to user directory `cp .vimrc ~/.vimrc`
 1. install Vundle `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
@@ -14,6 +19,10 @@
 1. `cp .git-prompt.sh ~/.git-prompt.sh`
 1. `brew install git bash-completion`
 
+if ubuntu, you'll need to add this line to the bottom of `~/.bashrc`:
+* `. ~/.bash_profile`
+* if you're still getting a bash error about `PS1`, try: `sudo apt-get install git-core bash-completion` to double check git-completion installed properly
+
 ## iterm settings
 
 - follow instrcutions at [dracula for iterm](https://draculatheme.com/iterm/) for setting iterm theme
@@ -23,6 +32,8 @@
 - once you've installed powerline fonts and symbols, head to preferenes > profiles > text and change font under Font to `source code pro` and Non-ASCII Font to `PowerlineSymbols`
 
 ## powerline fonts and symbols
+
+***For whatever reason, great fonts and symbols are automagically included in ubuntu 18.04, so no need to install any of these powerline fonts unless you really want them! However, you'll probably want emoji support for your unicorn, so `sudo apt-get install fonts-emojione`***
 
 Mostly followed these instructions: 
 - [How can I install and use powerline plugin](https://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin)
@@ -86,3 +97,8 @@ if [ "$COLORTERM" == "xfce4-terminal" ] ; then
   export TERM=xterm-256color
 fi
 ``` 
+
+## docker
+
+if docker is giving you the docker deamon connection error, try:
+* `sudo service docker start # Ubuntu/Debian`
