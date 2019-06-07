@@ -66,7 +66,7 @@ This took me forever to figure out, but it was as simple as cloning the powerlin
 Since macOS Catalina will be changing the default shell from bash to zsh, I've started working on tricking out my zsh setup. Of course I'm using oh my zsh, so head to [their homepage](https://ohmyz.sh) for install instructions. Then:
 
 1. `cp .zshrc ~/.zshrc`
-1. `cp .agnoster.zsh-theme ~/.oh-my-zsh/themes/agnoster.zsh-theme`
+1. `cp agnoster.zsh-theme ~/.oh-my-zsh/themes/agnoster.zsh-theme`
 
 I spent a few hours trying to figure out why my agnoster symbols didn't match their README images... turns out the agnoster file shipped with the oh my zsh install is out of date. Mine is the latest (as of June 2019).
 
