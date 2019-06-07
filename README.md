@@ -72,6 +72,8 @@ I spent a few hours trying to figure out why my agnoster symbols didn't match th
 
 One other change I made in iTerm is under Preferences > Profiles > Colors: change Black to 20% Gray (you can choose this options when you click on the black square under "Normal") so it's not so starkly black behind the unicorn emoji.
 
+*On macOS, I had issues with the stupid `^M` carriage returns in the zsh files and got a "parse error". See [parse errors issue](https://github.com/robbyrussell/oh-my-zsh/issues/4870) in the oh my zsh repo for the workaround.* 
+
 ### linux
 
 Getting powerline fonts and symbols set up for oh-my-zsh was a whole thing, and I finally figured out why: I had all my font config stuff "installed" in my /home/caryl (user) files but for zsh, they needed to be installed/configured in the ~ (root) files. 
