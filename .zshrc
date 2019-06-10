@@ -102,3 +102,30 @@ prompt_context() {
     prompt_segment black default "%(!.%{%F{yellow}%}.)🦄 "
   fi
 }
+
+# cd to UA wordpress install
+alias cdroots='cd /Applications/wordpress-5.0.3-2/apps/wordpress/htdocs/wp-content/themes/roots-ualib'
+
+# bat rules
+alias cat='bat'
+
+# markdown to rtf (see: ostricher.com, august 2015)
+# had to do some sed replacement magic to fix an apostrophe encoding issue
+# the problem: the textutil convert step uses ANSI instead of UTF-8 or vice versa
+# cat the file with the issue followed by the pandoc and textutil steps below; look for the offending character and replace like the SED commands below
+# in case you need to do this again, here's a decent ANSI table: http://www.alanwood.net/demos/ansi.html
+SED="s|\\\'e2\\\'80\\\'99|\\\'92|g"; export SED
+SEDLEFTQUOTE="s|\\\'e2\\\'80\\\'9c|\\\'93|g"; export SEDLEFTQUOTE
+SEDRIGHTQUOTE="s|\\\'e2\\\'80\\\uc0\\\u157|\\\'94|g"; export SEDRIGHTQUOTE
+
+
+# to use: `$ cat file.md | md` -> copies md file to clipboard for pasting elsewhere
+alias md='pandoc --from markdown --to html | textutil -convert rtf -stdin -stdout -format html | sed $SED |sed $SEDLEFTQUOTE | sed $SEDRIGHTQUOTE | pbcopy -Prefer rtf'
+
+# copy html from file to clipboard (this is tricky in vim)
+# to use: `$ cat file.html | html`
+alias html='pbcopy -Prefer html'
+
+# open file in chrome
+# to use: `$ chrome index.html`
+alias chrome='open -a "Google Chrome"'
