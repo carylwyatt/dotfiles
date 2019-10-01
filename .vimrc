@@ -35,6 +35,13 @@ filetype plugin indent on    " required
 
 " Put your non-Plugin stuff after this line
 
+" MacOS clipboard sharing
+set clipboard=unnamed
+
+" normal mode copies one line, visual mode copies all highlighted
+nmap <F12> :.w !pbcopy<CR><CR>
+vmap <F12> :w !pbcopy<CR><CR>
+
 " easy buffer switching
 map gn :bn<cr>
 map gp :bp<cr>
@@ -51,9 +58,9 @@ if !exists('g:airline_symbols')
 endif
 
 " unicode symbols
-"let g:airline_left_sep = '»'
-"let g:airline_right_sep = '«'
-"let g:airline_symbols.linenr = '¶'
+" let g:airline_left_sep = '»'
+" let g:airline_right_sep = '«'
+" let g:airline_symbols.linenr = '¶'
 
 " caryl's key mappings
 
@@ -62,7 +69,7 @@ map <silent> <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeNodeDelimiter = "\u00a0"
 
 "auto-open NERDTree in vim
-au VimEnter * NERDTree
+"au VimEnter * NERDTree
 
 "close vim if only NERDTree window exit
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -83,6 +90,7 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd FileType gitcommit setlocal spell
 
 syntax enable
+set omnifunc=syntaxcomplete#Complete
 set guifont=Source\ Code\ Pro\ for\ Powerline "make sure to escape the spaces in the name properly
 set encoding=utf-8
 set t_Co=256
