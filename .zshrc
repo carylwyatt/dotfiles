@@ -129,3 +129,6 @@ alias html='pbcopy -Prefer html'
 # open file in chrome
 # to use: `$ chrome index.html`
 alias chrome='open -a "Google Chrome"'
+
+# more aliases... sshhhh
+. ~/.zsh_aliases
