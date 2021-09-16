@@ -19,6 +19,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'dracula/vim',{'name':'dracula'}
 Plugin 'terryma/vim-smooth-scroll'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
@@ -37,6 +38,9 @@ filetype plugin indent on    " required
 
 " MacOS clipboard sharing
 set clipboard=unnamed
+
+" fix snipmate error message
+let g:snipMate = { 'snippet_version' : 1 }
 
 " normal mode copies one line, visual mode copies all highlighted
 nmap <F12> :.w !pbcopy<CR><CR>
@@ -96,7 +100,7 @@ set encoding=utf-8
 set t_Co=256
 set termguicolors
 set background=dark
-color dracula
+colorscheme dracula
 set number relativenumber 
 set tabstop=2
 set shiftwidth=2

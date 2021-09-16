@@ -71,6 +71,9 @@ if !exists('g:airline_symbols')
           let g:airline_symbols = {}
 endif
 
+" fix snipmate error
+ let g:snipMate = { 'snippet_version' : 1 }
+
 " unicode symbols
 "let g:airline_left_sep = '»'
 "let g:airline_right_sep = '«'
