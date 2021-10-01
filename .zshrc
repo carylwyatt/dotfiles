@@ -130,5 +130,8 @@ alias html='pbcopy -Prefer html'
 # to use: `$ chrome index.html`
 alias chrome='open -a "Google Chrome"'
 
+## tailwindo doesn't have an actual command for some reason??
+alias tailwindo='~/.composer/vendor/awssat/tailwindo/tailwindo'
+
 # more aliases... sshhhh
 . ~/.zsh_aliases
