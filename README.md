@@ -14,6 +14,10 @@
 1. install Vundle `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 1. launch vim and run `:PluginInstall` 
 
+## neovim settings
+
+live at `~/.config/nvim/init.vim`
+
 ## if you want all the magic of my bash setup
 1. `cp .bash_profile ~/.bash_profile`
 1. `cp .git-prompt.sh ~/.git-prompt.sh`
