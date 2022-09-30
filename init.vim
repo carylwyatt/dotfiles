@@ -71,9 +71,6 @@ if !exists('g:airline_symbols')
           let g:airline_symbols = {}
 endif
 
-" fix snipmate error
- let g:snipMate = { 'snippet_version' : 1 }
-
 " unicode symbols
 "let g:airline_left_sep = '»'
 "let g:airline_right_sep = '«'
@@ -85,6 +82,9 @@ let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.snippets
 " vue for vim
 let g:vim_vue_plugin_load_full_syntax = 1
 
+" fix snipmate error
+ let g:snipMate = { 'snippet_version' : 1 }
+ 
 "caryl's key mappings
 
 " nerdtree
@@ -256,8 +256,8 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 syntax enable
-set guifont=Hack\ Nerd\ Font
 set encoding=UTF-8
+set guifont=FiraCode
 set t_Co=256
 set termguicolors
 set background=dark
