@@ -37,6 +37,10 @@ if ubuntu, you'll need to add this line to the bottom of `~/.bashrc`:
 
 ## powerline fonts and symbols
 
+**2022 UPDATE**
+Just use [nerd fonts](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts). 
+Easiest choice is to set iTerm2 fonts to "Hack Nerd Font Mono", 13 pt, use the ligatures. It's easy, and it's fine.
+
 ***For whatever reason, great fonts and symbols are automagically included in ubuntu 18.04, so no need to install any of these powerline fonts unless you really want them! However, you'll probably want emoji support for your unicorn, so `sudo apt-get install fonts-emojione`***
 
 Mostly followed these instructions: 
