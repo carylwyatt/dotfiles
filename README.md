@@ -16,7 +16,17 @@
 
 ## neovim settings
 
-live at `~/.config/nvim/init.vim`
+live at `~/.config/nvim/init.vim` -- which you'll probably have to create
+
+Neovim uses `vim-plug` instead of Vundle, so install that like this:
+
+`curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
+
+then:
+```
+nvim
+:PlugInstall
+```
 
 ## if you want all the magic of my bash setup
 1. `cp .bash_profile ~/.bash_profile`
