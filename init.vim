@@ -77,7 +77,9 @@ endif
 "let g:airline_symbols.linenr = '¶' 
 
 " custom emmet snippets file
-let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.snippets_custom.json')), "\n"))
+" commenting this out because i have no idea what custom emmet snippets i used
+" to have???? october 2022
+"let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.snippets_custom.json')), "\n"))
 
 " vue for vim
 let g:vim_vue_plugin_load_full_syntax = 1
@@ -92,7 +94,7 @@ map <silent> <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeNodeDelimiter = "\u00a0"
 
 "auto-open NERDTree in vim
-au VimEnter * NERDTree
+"au VimEnter * NERDTree
 
 "close vim if only NERDTree window exit
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
